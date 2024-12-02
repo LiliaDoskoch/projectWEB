@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Look&Feel</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./img/store.ico">
+    
+
+    <!-- Swiper Js CDN Link ( Link in Description ) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <style>
+        .sale-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .sale-text {
+            max-width: 50%;
+        }
+
+        .sale-text h1 {
+            color: #ff3c3c;
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .sale-text p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .countdown {
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            background: #ff3c3c;
+            padding: 15px 20px;
+            border-radius: 10px;
+            display: inline-block;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+
+        /* Кнопка */
+        .sale-text button {
+            background-color: #ff3c3c;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .sale-text button:hover {
+            background-color: #e02f2f;
+            transform: scale(1.1);
+        }
+
+        /* Анімація для появи таймера */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Анімація для миготіння */
+        .blink {
+            animation: blinkEffect 1s infinite;
+        }
+
+        @keyframes blinkEffect {
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        .sale-image img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+    
+    </style>
+</head>
+
+<body>
+    <!-- -------- Navbar Section -------- -->
+    <div class="navbar">
+        <div class="logo">
+            <img src="./img/logo.png" alt="Logo Image" width="145px">
+        </div>
+        <ul class="navlinks">
+            <li><a href="#products">Товари</a></li>
+            <li><a href="#Testimonial">Відгуки</a></li>
+            <li><a href="./pages/contact.html">Наша історія</a></li>
+        </ul>
+    </div>
+
+
+    <!-- -------- Home Section -------- -->
+    <section class="home_section" id="home">
+        <div class="home_container">
+            <h3 class="heading">Розпродаж зі знижкою 20%!
+                На всі товари<br><span></span></h3>
+                <p class="countdown">До завершення розпродажу залишилось: <span id="timer">7 днів</span></p>
+            <p class="home_para1">Ми пропонуємо високоякісний одяг для чоловіків, жінок і дітей, який поєднує стиль, комфорт і унікальність. Наша продукція – це класичні та сучасні речі, створені для тих, хто цінує позачасовий дизайн і мінімалізм. У нашому асортименті ви знайдете широкий вибір одягу з вишуканими деталями та лаконічними принтами, доступними у різних стилях і розмірах.</p>
+            <p class="home_para2"> Наша місія – стати улюбленим місцем для тих, хто шукає якісну та стильну моду. Ми прагнемо допомогти нашим клієнтам виразити свою індивідуальність через одяг, пропонуючи доступні ціни та широкий асортимент, що відповідає найвищим стандартам якості.</p>
+            
+            <a href="#products" class="home_btn btn">До покупок</a>
+        </div>
+    </section>
+
+
+    <!-- -------- Poster Section -------- -->
+    <section class="poster">
+        <h3 class="poster_heading head_text">Чому варто купувати у нас</h3>
+        <div class="poster_wrapper">
+            <div class="poster_card">
+                <img src="./img/free-delivery.png" class="icon">
+                <h4>Безкоштовна доставка</h4>
+                <p>Безкоштовна доставка для наших клієнтів при покупці на суму більше 3000 грн</p>
+            </div>
+            <div class="poster_card">
+                <img src="./img/free-ship.png" class="icon">
+                <h4>Універсальність та асортимент</h4>
+                <p>Одяг для чоловіків, жінок і дітей в різних стилях та розмірах</p>
+            </div>
+            <div class="poster_card">
+                <img src="./img/quality.png" class="icon">
+                <h4>Найкраща якість</h4>
+                <p>Ви отримаєте продукцію з високоякісних матеріалів, що забезпечує комфорт і довговічність кожного виробу</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- -------- New Arrival Section -------- -->
+    <section class="new_arrival">
+        <div class="arrival_container">
+            <h3 class="heading">#НовийТовар</h3>
+            <p>Наша мета — стати улюбленим магазином для тих, хто шукає якісні модні вироби. Пропонуючи доступний і різноманітний асортимент, ми прагнемо допомогти нашим клієнтам знайти свій унікальний стиль і вільно його виражати. Ми віримо, що стильна мода має бути доступною кожному, і наші продукти покликані зробити це можливим.</p>
+            <a href="#products" class="btn arrival_btn">Асортимент</a>
+        </div>
+    </section>
+
+
+    <!-- -------- Our Products Section -------- -->
+    <section class="our_products" id="products">
+        <h3 class="product_heading head_text">Наші <span>Колекції</span></h3>
+
+        <div class="products_container">
+            <div class="product_card">
+                <div class="img">
+                    <img src="./img/p1.png" width="140px">
+                </div>
+                <div class="details">
+                    <p class="name">Штани чоловічі</p>
+                    <p class="price">2100 грн</p>
+                </div>
+                <div class="buttons">
+                    <a href="#" class="addTO_cart">Додати в корзину</a>
+                    <a href="#" class="buy_now">Купити зараз</a>
+                </div>
+            </div>
+            <div class="product_card">
+                <div class="img">
+                    <img src="./img/p2.png" width="140px">
+                </div>
+                <div class="details">
+                    <p class="name">Футболка чоловіча</p>
+                    <p class="price">450 грн</p>
+                </div>
+                <div class="buttons">
+                    <a href="#" class="addTO_cart">Додати в корзину</a>
+                    <a href="#" class="buy_now">Купити зараз</a>
+                </div>
+            </div>
+            <div class="product_card">
+                <div class="img">
+                    <img src="./img/p3.png" width="140px">
+                </div>
+                <div class="details">
+                    <p class="name">Туфлі чоловічі</p>
+                    <p class="price">4200 грн</p>
+                </div>
+                <div class="buttons">
+                    <a href="#" class="addTO_cart">Додати в корзину</a>
+                    <a href="#" class="buy_now">Купити зараз</a>
+                </div>
+            </div>
+            <div class="product_card">
+                <div class="img">
+                    <img src="./img/p4.png" width="140px">
+                </div>
+                <div class="details">
+                    <p class="name">Плаття</p>
+                    <p class="price">8999 грн</p>
+                </div>
+                <div class="buttons">
+                    <a href="#" class="addTO_cart">Додати в корзину</a>
+                    <a href="#" class="buy_now">Купити зараз</a>
+                </div>
+            </div>
+            <div class="product_card">
+                <div class="img">
+                    <img src="./img/p5.png" width="140px">
+                </div>
+                <div class="details">
+                    <p class="name">Туфлі жіночі</p>
+                    <p class="price">6200 грн</p>
+                </div>
+                <div class="buttons">
+                    <a href="#" class="addTO_cart">Додати в корзину</a>
+                    <a href="#" class="buy_now">Купити зараз</a>
+                </div>
+            </div>
+            <div class="product_card">
+                <div class="img">
+                    <img src="./img/p6.png" width="140px">
+                </div>
+                <div class="details">
+                    <p class="name">Жіночий капелюх</p>
+                    <p class="price">400 грн</p>
+                </div>
+                <div class="buttons">
+                    <a href="#" class="addTO_cart">Додати в корзину</a>
+                    <a href="#" class="buy_now">Купити зараз</a>
+                </div>
+            </div>
+            <div class="product_card">
+                <div class="img">
+                    <img src="./img/p7.png" width="140px">
+                </div>
+                <div class="details">
+                    <p class="name">Чоловічий костюм</p>
+                    <p class="price">19399 грн</p>
+                </div>
+                <div class="buttons">
+                    <a href="#" class="addTO_cart">Додати в корзину</a>
+                    <a href="#" class="buy_now">Купити зараз</a>
+                </div>
+            </div>
+            <div class="product_card">
+                <div class="img">
+                    <img src="./img/p8.png" width="140px">
+                </div>
+                <div class="details">
+                    <p class="name">Чоловіча сорочка</p>
+                    <p class="price">899 грн</p>
+                </div>
+                <div class="buttons">
+                    <a href="#" class="addTO_cart">Додати в корзину</a>
+                    <a href="#" class="buy_now">Купити зараз</a>
+                </div>
+            </div>
+            <div class="product_card">
+                <div class="img">
+                    <img src="./img/p9.png" width="140px">
+                </div>
+                <div class="details">
+                    <p class="name">Піджак чоловічий</p>
+                    <p class="price">1200 грн</p>
+                </div>
+                <div class="buttons">
+                    <a href="#" class="addTO_cart">Додати в корзину</a>
+                    <a href="#" class="buy_now">Купити зараз</a>
+                </div>
+            </div>
+            <div class="product_card">
+                <div class="img">
+                    <img src="./img/p10.png" width="140px">
+                </div>
+                <div class="details">
+                    <p class="name">Дитячі кросівки</p>
+                    <p class="price">1499 грн</p>
+                </div>
+                <div class="buttons">
+                    <a href="#" class="addTO_cart">Додати в корзину</a>
+                    <a href="#" class="buy_now">Купити зараз </a>
+                </div>
+            </div>
+            <div class="product_card">
+                <div class="img">
+                    <img src="./img/p11.png" width="140px">
+                </div>
+                <div class="details">
+                    <p class="name">Дитячі штани</p>
+                    <p class="price">600 грн</p>
+                </div>
+                <div class="buttons">
+                    <a href="#" class="addTO_cart">Додати в корзину</a>
+                    <a href="#" class="buy_now">Купити зараз</a>
+                </div>
+            </div>
+            <div class="product_card">
+                <div class="img">
+                    <img src="./img/p12.png" width="140px">
+                </div>
+                <div class="details">
+                    <p class="name">Дитяча кофта</p>
+                    <p class="price">400 грн</p>
+                </div>
+                <div class="buttons">
+                    <a href="#" class="addTO_cart">Додати в корзину</a>
+                    <a href="#" class="buy_now">Купити зараз</a>
+                </div>
+            </div>
+        </div>
+        <a href="./pages/product.html" class="view_allButton btn">Показати всі</a>
+    </section>
+    
+    
+    <section class="subscribe_letter">
+        <h3 class="sub_heading head_text">Підпишіться, щоб отримувати пропозиції зі знижками</h3>
+        <p>Підпишіться на нашу розсилку та будьте в курсі актуальних новин, стилів та розпродажів.</p>
+        <div class="input_box">
+            <input type="email" id="emailInput" placeholder="Введіть свій email">
+        </div>
+        <button class="btn sub_btn" onclick="subscribe()">Підписатися зараз</button>
+    </section>
+    
+    <script>
+        function subscribe() {
+            const email = document.getElementById('emailInput').value;
+    
+            if (!email) {
+                alert('Будь ласка, введіть ваш email');
+                return;
+            }
+    
+            fetch('https://your-backend-server.com/subscribe', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert('Дякуємо за підписку!');
+                document.getElementById('emailInput').value = ''; // Очищення поля
+            })
+            .catch(error => {
+                console.error('Помилка:', error);
+                alert('Сталася помилка. Спробуйте ще раз пізніше.');
+            });
+        }
+    </script>
+
+    <!-- Модальне вікно -->
+<div id="successModal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <p>Ви успішно підписалися!</p>
+      
+    </div>
+  </div>
+  
+
+
+
+    <!-- -------- Testimonials Section ( For Testimonials we will use Swiper Js Library LInk IN Description )-------- -->
+    <section class="testimonials" id="Testimonial">
+        <h3 class="test_heading head_text">Відгуки клієнтів</h3>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./img/c1.png" width="140px">
+                    <p class="text">Замовляла одяг для всієї родини, і залишилася в захваті! Якість речей чудова, матеріали приємні на дотик, а дизайн стильний і мінімалістичний. Асортимент великий, і кожен може знайти щось для себе. Дуже порадували доступні ціни при такій високій якості. Доставка швидка, все було добре упаковано. Обов’язково буду замовляти ще. </p>
+                    <div class="details">
+                        <p class="name">Олександра Ковальчук</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./img/c2.png" width="140px">
+                    <p class="text">Нещодавно замовив кілька речей з цього магазину, і залишився дуже задоволений. Одяг якісний, сидить чудово, і видно, що матеріали добротні. Особливо сподобався мінімалістичний дизайн — виглядає стильно та актуально. Ціни приємно здивували, враховуючи рівень якості. Доставка швидка, без затримок. Тепер це мій улюблений магазин, буду замовляти тут ще! </p>
+                    <div class="details">
+                        <p class="name">Андрій Козаченко</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./img/c3.png" width="140px">
+                    <p class="text">Придбала тут сукню, і вона просто чудова! Тканина дуже приємна на дотик, легка та дихаюча. Сукня сидить ідеально, підкреслює фігуру, при цьому залишаючись зручною. Дизайн мінімалістичний, але виглядає стильно та вишукано. Я точно знайшла свій улюблений магазин! </p>
+                    <div class="details">
+                        <p class="name">Антоніна Кучма</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./img/c4.png" width="140px">
+                    <p class="text">Купила тут туфлі, і вони просто неймовірні! Дуже зручні, навіть після тривалого носіння. Виглядають стильно та елегантно, легко поєднуються з різними образами. Якість відмінна, матеріали міцні, і видно, що зроблені з увагою до деталей. Туфлі стали справжньою знахідкою для мого гардеробу! </p>
+                    <div class="details">
+                        <p class="name">Олена Макарова</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+
+   <!-- -------- Footer Section -------- -->
+    <section class="footer">
+        <div class="footer_container">
+            <div class=" col col_1">
+                <img src="./img/logo.png" width="150px">
+                <p><span>Адресса : </span>вул. Степана Бандери 5, м.Львів</p>
+                <p><span>Телефон : </span>+380999999999</p>
+                <p><span>Електрона пошта : </span>LookAndFeel@gmail.com</p>
+            </div>
+            <div class="col col_2">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2573.363217330309!2d24.013766246884895!3d49.83563242608317!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add7a31f0dccd%3A0x9869cc7025bc8e3f!2z0J3QsNGG0ZbQvtC90LDQu9GM0L3QuNC5INGD0L3RltCy0LXRgNGB0LjRgtC10YIgItCb0YzQstGW0LLRgdGM0LrQsCDQn9C-0LvRltGC0LXRhdC90ZbQutCwIg!5e0!3m2!1suk!2sua!4v1726833615782!5m2!1suk!2sua" width="700" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        <div class="footer_tagline">
+            <p class="tagline">Copyright &#xa9; 2024 Львів, всі права захищені| Цей інтернет магазин зроблений з любов'ю для вас.</p>
+        </div>
+    </section>
+
+
+
+
+    <!-- ION-Icon CDN Link ( Link in Description ) -->
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="./main.js"></script>
+    <script>
+        // Встановлюємо кінцеву дату (7 днів від поточної дати)
+        const endDate = new Date();
+        endDate.setDate(endDate.getDate() + 7);
+
+        // Оновлення таймера
+        function updateTimer() {
+            const now = new Date();
+            const timeDiff = endDate - now;
+
+            if (timeDiff <= 0) {
+                document.getElementById("timer").innerText = "Розпродаж завершено!";
+                clearInterval(timerInterval);
+                return;
+            }
+
+            const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+
+            document.getElementById("timer").innerText = 
+                `${days} днів, ${hours} годин, ${minutes} хвилин, ${seconds} секунд`;
+        }
+
+        // Оновлюємо таймер кожну секунду
+        const timerInterval = setInterval(updateTimer, 1000);
+
+        // Викликаємо функцію одразу, щоб не було затримки
+        updateTimer();
+    </script>
+</body>
+</html>
